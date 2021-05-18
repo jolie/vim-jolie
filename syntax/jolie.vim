@@ -18,9 +18,6 @@ syn match jolieSpecialChar contained "\\."
 
 syn region jolieString start=+"+ end=+"+ contains=jolieSpecialChar
 
-"syn region jolieClass "\s(\w\+)@" ms=s+1
-"syn region jolieMethod "@(\w\+)" ms=s+1
-
 syn match jolieNumber "\<\d\+\>"
 
 syn match jolieMethodInvocation "\<\(\w\+\)@\(\w\+\)\>" contains=jolieMethodName,jolieClassName
@@ -54,8 +51,6 @@ hi def link jolieKeywordModifiers StorageClass
 hi def link jolieString         String
 
 hi def link jolieNumber         Number
-"hi def link jolieClass          Type
-"hi def link jolieMethod         Function
 
 hi def link jolieMethodName     Function
 hi def link jolieClassName      Type
