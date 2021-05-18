@@ -2,9 +2,6 @@ if exists("b:current_syntax")
   finish
 endif
 
-syn region  jolieComment		 start="/\*"  end="\*/" 
-syn match   jolieLineComment	 "//.*"
-
 syn keyword jolieBoolean		true false
 syn keyword jolieDefinitionTypes    inputPort outputPort interface type define service
 syn keyword jolieKeyword location Location protocol Protocol interfaces Interfaces aggregates Aggregates redirects Redirects class Jolie JavaScript Java OneWay oneWay RequestResponse requestResponse execution
@@ -30,6 +27,10 @@ syn match jolieMethodInvocation "\<\(\w\+\)@\(\w\+\)\>" contains=jolieMethodName
 
 syn match jolieMethodName "\w\+@"me=e-1 contained
 syn match jolieClassName "@\w\+\>"ms=s+1 contained
+
+syn keyword jolieTodo contained TODO FIXME
+syn region  jolieComment		 start="/\*"  end="\*/" contains=jolieTodo
+syn match   jolieLineComment	 "//.*"
 
 let b:current_syntax = "jolie"
 
