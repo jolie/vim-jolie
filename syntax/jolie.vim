@@ -25,6 +25,8 @@ syn match jolieMethodInvocation "\<\(\w\+\)@\(\w\+\)\>" contains=jolieMethodName
 syn match jolieMethodName "\w\+@"me=e-1 contained
 syn match jolieClassName "@\w\+\>"ms=s+1 contained
 
+syn match jolieMethodName2 "\(\w\+\)("
+
 syn keyword jolieTodo contained TODO FIXME
 syn region  jolieComment		 start="/\*"  end="\*/" contains=jolieTodo
 syn match   jolieLineComment	 "//.*"
@@ -54,3 +56,4 @@ hi def link jolieNumber         Number
 
 hi def link jolieMethodName     Function
 hi def link jolieClassName      Type
+hi def link jolieMethodName2    Function
