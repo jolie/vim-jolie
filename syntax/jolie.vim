@@ -4,7 +4,7 @@ endif
 
 syn region  jolieComment		 start="/\*"  end="\*/" 
 syn match   jolieLineComment	 "//.*"
-syn match   jolieNumber          "\b\d+\b"
+
 syn keyword jolieBoolean		true false
 syn keyword jolieDefinitionTypes    inputPort outputPort interface type define service
 syn keyword jolieKeyword location Location protocol Protocol interfaces Interfaces aggregates Aggregates redirects Redirects class Jolie JavaScript Java OneWay oneWay RequestResponse requestResponse execution
@@ -24,8 +24,16 @@ syn region jolieString start=+"+ end=+"+ contains=jolieSpecialChar
 "syn region jolieClass "\s(\w\+)@" ms=s+1
 "syn region jolieMethod "@(\w\+)" ms=s+1
 
+syn match jolieNumber "\<\d\+\>"
+
+syn match jolieMethodInvocation "\<\(\w\+\)@\(\w\+\)\>" contains=jolieMethodName,jolieClassName
+
+syn match jolieMethodName "\w\+@"me=e-1 contained
+syn match jolieClassName "@\w\+\>"ms=s+1 contained
+
+let b:current_syntax = "jolie"
+
 hi def link jolieBoolean		Boolean
-hi def link jolieNumber         Number
 hi def link jolieComment        Comment
 hi def link jolieLineComment    Comment
 hi def link jolieDefinitionTypes Keyword
@@ -44,7 +52,9 @@ hi def link jolieKeywordModifiers StorageClass
 
 hi def link jolieString         String
 
+hi def link jolieNumber         Number
 "hi def link jolieClass          Type
 "hi def link jolieMethod         Function
 
-let b:current_syntax = "jolie"
+hi def link jolieMethodName     Function
+hi def link jolieClassName      Type
