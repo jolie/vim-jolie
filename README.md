@@ -12,6 +12,5 @@ other language files blended in.
 With Vim 8, jolie.vim can be installed without additional plugins (see `:help packages` for details).
 
 ```
-cd ~/.vim/pack/foo/start
-git clone https://github.com/michaeljmcd/jolie.vim
+git clone https://github.com/michaeljmcd/jolie.vim ~/.vim/pack/plugins/start/jolie.vim
 ```
