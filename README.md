@@ -1,4 +1,4 @@
-# jolie.vim
+# vim-jolie
 
 This repo provides syntax highlighting for the programming language
 [Jolie](https://www.jolie-lang.org/). Tokens are based largely on the 
@@ -9,8 +9,8 @@ other language files blended in.
 
 ### Vim 8
 
-With Vim 8, jolie.vim can be installed without additional plugins (see `:help packages` for details).
+With Vim 8, vim-jolie can be installed without additional plugins (see `:help packages` for details).
 
 ```
-git clone https://github.com/michaeljmcd/jolie.vim ~/.vim/pack/plugins/start/jolie.vim
+git clone https://github.com/michaeljmcd/vim-jolie ~/.vim/pack/plugins/start/vim-jolie
 ```
