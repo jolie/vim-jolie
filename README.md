@@ -12,5 +12,5 @@ other language files blended in.
 With Vim 8, vim-jolie can be installed without additional plugins (see `:help packages` for details).
 
 ```
-git clone https://github.com/michaeljmcd/vim-jolie ~/.vim/pack/plugins/start/vim-jolie
+git clone https://github.com/jolie/vim-jolie ~/.vim/pack/plugins/start/vim-jolie
 ```
